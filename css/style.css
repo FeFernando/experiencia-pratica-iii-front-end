@@ -294,3 +294,21 @@ footer {
 @media (max-width: 768px)  { /* Tablet retrato */ }
 @media (max-width: 576px)  { /* Celular médio */ }
 @media (max-width: 400px)  { /* Celular pequeno */ }
+
+
+.success-message {
+  display: none;
+  color: #2e7d32;
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.success-message.show {
+  display: block;
+  opacity: 1;
+}

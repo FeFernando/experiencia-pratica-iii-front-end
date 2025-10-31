@@ -53,42 +53,43 @@ const Templates = {
 
   cadastro: () => `
     <section class="signup-section">
-    <h2>Cadastro de Voluntários</h2>
-    <div class="success-message" id="successMessage">
-      ✅ Cadastro realizado com sucesso! Entraremos em contato em breve.
-    </div>
-    <form id="volunteerForm">
-      <fieldset>
-        <legend>Dados Pessoais</legend>
-
-        <div class="form-group">
-          <label for="nome">Nome Completo *</label>
-          <input type="text" id="nome" name="nome" required minlength="3">
-          <span class="error-message" id="error-nome"></span>
+        <h2>Cadastro de Voluntários</h2>
+        <div class="success-message" id="successMessage">
+            ✅ Cadastro realizado com sucesso! Entraremos em contato em breve.
         </div>
+        <form id="volunteerForm">
+            <fieldset>
+            <legend>Dados Pessoais</legend>
 
-        <div class="form-group">
-          <label for="email">E-mail *</label>
-          <input type="email" id="email" name="email" required>
-          <span class="error-message" id="error-email"></span>
-        </div>
+            <div class="form-group">
+                <label for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" required minlength="3">
+                <span class="error-message" id="error-nome"></span>
+            </div>
 
-        <div class="form-group">
-          <label for="telefone">Telefone *</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required pattern="^\\(\\d{2}\\)\\s\\d{5}-\\d{4}$">
-          <span class="error-message" id="error-telefone"></span>
-        </div>
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="error-email"></span>
+            </div>
 
-        <div class="form-group">
-          <label for="idade">Idade *</label>
-          <input type="number" id="idade" name="idade" min="16" max="100" required>
-          <span class="error-message" id="error-idade"></span>
-        </div>
-      </fieldset>
+            <div class="form-group">
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" >
+                <span class="error-message" id="error-telefone"></span>
+            </div>
 
-      <button type="submit" class="btn-primary">Enviar Cadastro</button>
-    </form>
-  </section>
+            <div class="form-group">
+                <label for="idade">Idade *</label>
+                <input type="number" id="idade" name="idade" min="16" max="100" required>
+                <span class="error-message" id="error-idade"></span>
+            </div>
+            </fieldset>
+
+            <button type="submit" class="btn-primary">Enviar Cadastro</button>
+        </form>
+    </section>
+
   `,
 
   
