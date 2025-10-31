@@ -53,74 +53,42 @@ const Templates = {
 
   cadastro: () => `
     <section class="signup-section">
-            <h2>Cadastro de Voluntários</h2>
-          <div class="success-message" id="successMessage">
-                ✅ Cadastro realizado com sucesso! Entraremos em contato em breve.
-            </div>
-            <form id="volunteerForm" onsubmit="handleSubmit(event)">
-                <fieldset>
-                    <legend>Dados Pessoais</legend>
-                    <div class="form-group">
-                        <label for="nome">Nome Completo *</label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefone">Telefone *</label>
-                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="idade">Idade *</label>
-                        <input type="number" id="idade" name="idade" min="16" max="100" required>
-                    </div>
-                </fieldset>
+    <h2>Cadastro de Voluntários</h2>
+    <div class="success-message" id="successMessage">
+      ✅ Cadastro realizado com sucesso! Entraremos em contato em breve.
+    </div>
+    <form id="volunteerForm">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
 
-                <fieldset>
-                    <legend>Disponibilidade</legend>
-                    <div class="form-group">
-                        <label for="disponibilidade">Quando você pode ajudar? *</label>
-                        <select id="disponibilidade" name="disponibilidade" required>
-                            <option value="">Selecione...</option>
-                            <option value="fins-de-semana">Fins de semana</option>
-                            <option value="dias-uteis">Dias úteis</option>
-                            <option value="flexivel">Horário flexível</option>
-                            <option value="pontual">Ações pontuais</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="area-interesse">Área de Interesse *</label>
-                        <select id="area-interesse" name="area-interesse" required>
-                            <option value="">Selecione...</option>
-                            <option value="distribuicao-alimentos">Distribuição de Alimentos</option>
-                            <option value="educacao">Educação e Capacitação</option>
-                            <option value="saude">Apoio à Saúde</option>
-                            <option value="administrativo">Apoio Administrativo</option>
-                            <option value="qualquer">Qualquer área</option>
-                        </select>
-                    </div>
-                </fieldset>
+        <div class="form-group">
+          <label for="nome">Nome Completo *</label>
+          <input type="text" id="nome" name="nome" required minlength="3">
+          <span class="error-message" id="error-nome"></span>
+        </div>
 
-                <fieldset>
-                    <legend>Informações Adicionais</legend>
-                    <div class="form-group">
-                        <label for="experiencia">Você já participou de ações voluntárias antes?</label>
-                        <textarea id="experiencia" name="experiencia" placeholder="Conte-nos sobre sua experiência..."></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="motivacao">Por que você quer ser voluntário?</label>
-                        <textarea id="motivacao" name="motivacao" placeholder="Compartilhe sua motivação..."></textarea>
-                    </div>
-                </fieldset>
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error-message" id="error-email"></span>
+        </div>
 
-                <button type="submit" class="btn-primary">Enviar Cadastro</button>
-            </form>
-           
-           
+        <div class="form-group">
+          <label for="telefone">Telefone *</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required pattern="^\\(\\d{2}\\)\\s\\d{5}-\\d{4}$">
+          <span class="error-message" id="error-telefone"></span>
+        </div>
 
-        </section>
+        <div class="form-group">
+          <label for="idade">Idade *</label>
+          <input type="number" id="idade" name="idade" min="16" max="100" required>
+          <span class="error-message" id="error-idade"></span>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn-primary">Enviar Cadastro</button>
+    </form>
+  </section>
   `,
 
   
