@@ -312,3 +312,10 @@ footer {
   display: block;
   opacity: 1;
 }
+
+
+.dark {
+  background-color: #222222;
+  color: white;
+}
+

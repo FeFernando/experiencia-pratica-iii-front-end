@@ -4,6 +4,8 @@ function toggleMenu() {
   menu.classList.toggle("show");
 }
 
+
+
 function initFormValidation() {
   const form = document.getElementById("volunteerForm");
   if (!form) return; 
@@ -51,6 +53,14 @@ function initFormValidation() {
     }
   });
 }
+
+
+function toggleDarkMode(){
+  document.body.classList.toggle("dark");
+}
+
+
+document.getElementById("dark-mode").addEventListener("click", toggleDarkMode);
 
 window.addEventListener("hashchange", () => setTimeout(initFormValidation, 100));
 window.addEventListener("load", () => setTimeout(initFormValidation, 100));
