@@ -55,3 +55,25 @@ Idade (entre 16 e 100 anos).
 
 Ao enviar o formulário corretamente, o sistema exibe uma mensagem de sucesso temporária:
 
+
+Fluxo de Desenvolvimento
+
+Este projeto segue um fluxo baseado em Git Flow:
+
+- `main`: código de produção
+- `develop`: integra novas features antes de ir para produção
+- `feature/dark-mode`: utilizada para desenvolver o modo escuro no site
+
+Issues
+
+Usamos Issues para gerenciar tarefas, melhorias e bugs.
+
+Cada Issue deve conter:
+- Título claro
+- Descrição do que será feito
+- Checklist de subtarefas
+- Labels (ex: feature, bug, design, accessibility)
+
+Ao concluir uma feature, abra um Pull Request para `develop`.
+
+
